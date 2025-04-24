@@ -8,16 +8,15 @@ body {
 header {
     background-color: #4a148c; /* Morado oscuro */
     color: white;
-    padding: 40px 0;
+    padding: 20px 0;
     text-align: center;
     position: relative;
-    height: 400px; /* Ajusta la altura del header */
+    height: 180px; /* Reducimos la altura del header */
 }
 
 header .container {
     display: flex;
-    justify-content: center; /* Centrado del contenido en el header */
-    align-items: center; /* Alineación vertical */
+    justify-content: space-between;
     width: 100%;
     position: relative;
     z-index: 1;
@@ -28,17 +27,6 @@ header .container {
 header h1 {
     font-size: 36px;
     z-index: 1; /* Asegura que el texto del título esté encima de la imagen */
-}
-
-header .header-text {
-    position: absolute;
-    top: 50%; /* Centra verticalmente */
-    left: 50%; /* Centra horizontalmente */
-    transform: translate(-50%, -50%); /* Alineación perfecta */
-    font-size: 24px;
-    font-weight: bold;
-    color: white; /* Texto en blanco */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra para mayor visibilidad */
 }
 
 .header-image-wrapper {
@@ -55,6 +43,20 @@ header img.header-image {
     height: 100%;
     object-fit: cover;
     opacity: 0.5; /* Imagen con 50% de opacidad */
+}
+
+.header-text-container {
+    text-align: center;
+    padding-top: 20px; /* Esto mueve el texto hacia abajo */
+    padding-bottom: 40px; /* Espacio debajo del texto */
+}
+
+.header-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: white; /* Texto en blanco */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra para mayor visibilidad */
+    margin: 10px 0; /* Espaciado entre los párrafos */
 }
 
 nav {
@@ -145,3 +147,4 @@ footer {
         margin: 10px 0;
     }
 }
+
