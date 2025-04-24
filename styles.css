@@ -47,20 +47,20 @@ header img.header-image {
 
 .header-text-container {
     text-align: center;
-    padding-top: 20px; /* Esto mueve el texto hacia abajo */
-    padding-bottom: 40px; /* Espacio debajo del texto */
+    padding-top: 20px;
+    padding-bottom: 40px;
 }
 
 .header-text {
     font-size: 24px;
     font-weight: bold;
-    color: black; /* Texto en negro */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra para mayor visibilidad */
-    margin: 10px 0; /* Espaciado entre los párrafos */
+    color: black;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    margin: 10px 0;
 }
 
 nav {
-    background-color: #6a1b9a; /* Morado más claro para la barra de navegación */
+    background-color: #6a1b9a;
     padding: 10px 0;
 }
 
@@ -89,12 +89,12 @@ nav a {
 }
 
 .resaltar {
-    color: #3f51b5; /* Azul vibrante para resaltar */
+    color: #3f51b5;
     font-weight: bold;
 }
 
 .whatsapp-button {
-    background-color: #25D366; /* Verde clásico de WhatsApp */
+    background-color: #25D366;
     color: white;
     padding: 12px 20px;
     text-decoration: none;
@@ -104,14 +104,13 @@ nav a {
 }
 
 footer {
-    background-color: #4a148c; /* Mismo morado oscuro para el pie de página */
+    background-color: #4a148c;
     color: white;
     text-align: center;
     padding: 15px 0;
     margin-top: 30px;
 }
 
-/* Estilo para el enlace de Instagram */
 .social-link {
     color: #0073e6;
     text-decoration: none;
@@ -124,39 +123,87 @@ footer {
 
 /* Estilos para el catálogo deslizable */
 .carousel {
-    overflow: hidden;
+    position: relative;
+    height: auto;
     margin-top: 20px;
-    width: 100%;
+    text-align: center;
 }
 
 .carousel-images {
-    display: flex;
-    animation: slide 10s infinite;
+    position: relative;
+    width: 100%;
+    height: auto;
 }
 
 .carousel-images img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 80%;
-    max-width: 400%; /* Solo una imagen a la vez */
-    margin: 0 10px;
+    max-width: 100%;
+    margin: 0 auto;
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    animation: fade 16s infinite;
+    transition: opacity 1s ease-in-out;
 }
 
-/* Animación para deslizar las imágenes */
-@keyframes slide {
-    0% {
-        transform: translateX(0);
+/* Animación para mostrar cada imagen por 4 segundos */
+@keyframes fade {
+    0%   { opacity: 1; }
+    20%  { opacity: 1; }
+    25%  { opacity: 0; }
+
+    25.01% { opacity: 0; }
+    45%  { opacity: 1; }
+    50%  { opacity: 0; }
+
+    50.01% { opacity: 0; }
+    70%  { opacity: 1; }
+    75%  { opacity: 0; }
+
+    75.01% { opacity: 0; }
+    95%  { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* Retrasos para cada imagen */
+.carousel-images img:nth-child(1) {
+    animation-delay: 0s;
+}
+.carousel-images img:nth-child(2) {
+    animation-delay: 4s;
+}
+.carousel-images img:nth-child(3) {
+    animation-delay: 8s;
+}
+.carousel-images img:nth-child(4) {
+    animation-delay: 12s;
+}
+
+/* Media Query para dispositivos móviles */
+@media (max-width: 768px) {
+    header {
+        padding: 20px;
+        height: 300px;
     }
-    25% {
-        transform: translateX(-100%);
+
+    header .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
-    50% {
-        transform: translateX(-200%);
+
+    header h1 {
+        font-size: 28px;
     }
-    75% {
-        transform: translateX(-300%);
+
+    nav ul {
+        flex-direction: column;
     }
-    100% {
-        transform: translateX(-400%);
+
+    nav li {
+        margin: 10px 0;
     }
 }
