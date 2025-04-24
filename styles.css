@@ -132,7 +132,7 @@ footer {
 
 .carousel-images {
     display: flex;
-    animation: slide 12s infinite; /* Cambié la duración de la animación a 12s */
+    animation: slide 14s infinite; /* Ajustamos la duración total */
 }
 
 .carousel-images img {
@@ -146,18 +146,15 @@ footer {
 /* Animación para deslizar las imágenes */
 @keyframes slide {
     0% {
-        transform: translateX(0);
+        transform: translateX(0); /* Primera imagen */
     }
-    25% {
-        transform: translateX(-100%);
+    35% {
+        transform: translateX(-100%); /* Segunda imagen */
     }
-    50% {
-        transform: translateX(-200%);
-    }
-    75% {
-        transform: translateX(-300%);
+    70% {
+        transform: translateX(-200%); /* Tercera imagen */
     }
     100% {
-        transform: translateX(-400%);
+        transform: translateX(-300%); /* Cuarta imagen */
     }
 }
