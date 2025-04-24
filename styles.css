@@ -131,7 +131,7 @@ footer {
 
 .carousel-images {
     display: flex;
-    animation: slide 12s infinite;
+    animation: slide 10s infinite;
 }
 
 .carousel-images img {
