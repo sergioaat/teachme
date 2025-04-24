@@ -126,92 +126,38 @@ footer {
 .carousel {
     overflow: hidden;
     margin-top: 20px;
-    text-align: center;
     width: 100%;
-    min-height: 300px; /* Asegura el espacio vertical reservado */
+    position: relative; /* Mantener la posición de las imágenes */
 }
 
 .carousel-images {
     display: flex;
-    animation: slide 10s infinite;
+    animation: slide 12s infinite; /* Cambié la duración de la animación a 12s */
 }
 
 .carousel-images img {
-    width: 80%;
-    max-width: 400%; /* Solo una imagen a la vez */
-    margin: 0 auto;
+    width: 100%;
+    max-width: 100%; /* Esto garantiza que solo una imagen se ve a la vez */
+    margin: 0;
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-    opacity: 0;
-    animation: fade 16s infinite;
-    transition: opacity 1s ease-in-out;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
 }
 
-
-/* Animación secuencial para cada imagen */
-.carousel-images img:nth-child(1) {
-    animation-delay: 0s;
-}
-.carousel-images img:nth-child(2) {
-    animation-delay: 4s;
-}
-.carousel-images img:nth-child(3) {
-    animation-delay: 8s;
-}
-.carousel-images img:nth-child(4) {
-    animation-delay: 12s;
-}
-
-@keyframes fade {
+/* Animación para deslizar las imágenes */
+@keyframes slide {
     0% {
-        opacity: 0;
-    }
-    5% {
-        opacity: 1;
+        transform: translateX(0);
     }
     25% {
-        opacity: 1;
+        transform: translateX(-100%);
     }
-    30% {
-        opacity: 0;
+    50% {
+        transform: translateX(-200%);
+    }
+    75% {
+        transform: translateX(-300%);
     }
     100% {
-        opacity: 0;
-    }
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    header {
-        padding: 20px;
-        height: 300px;
-    }
-
-    header .container {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    header h1 {
-        font-size: 28px;
-    }
-
-    nav ul {
-        flex-direction: column;
-    }
-
-    nav li {
-        margin: 10px 0;
-    }
-
-    .carousel-images img {
-        width: 100%;
+        transform: translateX(-400%);
     }
 }
