@@ -122,40 +122,37 @@ footer {
     text-decoration: underline;
 }
 
-/* Estilos para el catálogo deslizable */
+/* Estilos para las imágenes de actividad */
 .carousel {
     overflow: hidden;
     margin-top: 20px;
     width: 100%;
-    position: relative; /* Mantener la posición de las imágenes */
+    position: relative;
 }
 
 .carousel-images {
     display: flex;
-    animation: slide 14s infinite; /* Ajustamos la duración total */
+    animation: slide 14s infinite; /* Duración total de la animación */
+    position: relative;
 }
 
 .carousel-images img {
-    width: 100%;
-    max-width: 70%; /* Reducir el tamaño en un 30% */
+    width: 100%; /* Asegura que cada imagen ocupe el 100% del contenedor */
+    max-width: 70%; /* Reducir el tamaño de las imágenes al 70% de su tamaño original */
     margin: 0;
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-    object-fit: cover; /* Asegura que las imágenes se mantengan proporcionales */
+    object-fit: cover;
 }
 
 /* Animación para deslizar las imágenes */
 @keyframes slide {
     0% {
-        transform: translateX(0); /* Primera imagen */
+        opacity: 1; /* Imagen visible al inicio */
     }
-    35% {
-        transform: translateX(-100%); /* Segunda imagen */
+    25% {
+        opacity: 0; /* Imagen se oculta después del primer intervalo (5 segundos) */
     }
-    70% {
-        transform: translateX(-200%); /* Tercera imagen */
-    }
-    100% {
-        transform: translateX(-300%); /* Cuarta imagen */
-    }
-}
+    30% {
+        transform: translateX(-
+
