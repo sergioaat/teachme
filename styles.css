@@ -1,17 +1,17 @@
 body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f0f4f8;
-    color: #333;
+    background-color: #f0f4f8; /* Fondo azul claro */
+    color: #333; /* Color de texto oscuro */
 }
 
 header {
-    background-color: #4a148c;
+    background-color: #4a148c; /* Morado oscuro */
     color: white;
     padding: 20px 0;
     text-align: center;
     position: relative;
-    height: 180px;
+    height: 180px; /* Reducimos la altura del header */
 }
 
 header .container {
@@ -26,7 +26,7 @@ header .container {
 
 header h1 {
     font-size: 36px;
-    z-index: 1;
+    z-index: 1; /* Asegura que el texto del título esté encima de la imagen */
 }
 
 .header-image-wrapper {
@@ -35,32 +35,32 @@ header h1 {
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 0;
+    z-index: 0; /* Imagen detrás del texto */
 }
 
 header img.header-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0.5;
+    opacity: 0.5; /* Imagen con 50% de opacidad */
 }
 
 .header-text-container {
     text-align: center;
-    padding-top: 20px;
-    padding-bottom: 40px;
+    padding-top: 20px; /* Esto mueve el texto hacia abajo */
+    padding-bottom: 40px; /* Espacio debajo del texto */
 }
 
 .header-text {
     font-size: 24px;
     font-weight: bold;
-    color: black;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-    margin: 10px 0;
+    color: black; /* Texto en negro */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra para mayor visibilidad */
+    margin: 10px 0; /* Espaciado entre los párrafos */
 }
 
 nav {
-    background-color: #6a1b9a;
+    background-color: #6a1b9a; /* Morado más claro para la barra de navegación */
     padding: 10px 0;
 }
 
@@ -89,12 +89,12 @@ nav a {
 }
 
 .resaltar {
-    color: #3f51b5;
+    color: #3f51b5; /* Azul vibrante para resaltar */
     font-weight: bold;
 }
 
 .whatsapp-button {
-    background-color: #25D366;
+    background-color: #25D366; /* Verde clásico de WhatsApp */
     color: white;
     padding: 12px 20px;
     text-decoration: none;
@@ -104,13 +104,14 @@ nav a {
 }
 
 footer {
-    background-color: #4a148c;
+    background-color: #4a148c; /* Mismo morado oscuro para el pie de página */
     color: white;
     text-align: center;
     padding: 15px 0;
     margin-top: 30px;
 }
 
+/* Estilo para el enlace de Instagram */
 .social-link {
     color: #0073e6;
     text-decoration: none;
@@ -121,96 +122,41 @@ footer {
     text-decoration: underline;
 }
 
-/* Carrusel de imágenes */
+/* Estilos para el catálogo deslizable */
 .carousel {
-    position: relative;
+    overflow: hidden;
     margin-top: 20px;
-    text-align: center;
     width: 100%;
-    min-height: 300px; /* Asegura el espacio vertical reservado */
 }
 
 .carousel-images {
-    position: relative;
-    width: 100%;
-    height: auto;
+    display: flex;
+    animation: slide 10s infinite;
 }
 
 .carousel-images img {
     width: 80%;
-    max-width: 100%;
-    margin: 0 auto;
+    max-width: 400%; /* Solo una imagen a la vez */
+    margin: 0 10px;
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-    opacity: 0;
-    animation: fade 16s infinite;
-    transition: opacity 1s ease-in-out;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
 }
 
-/* Animación secuencial para cada imagen */
-.carousel-images img:nth-child(1) {
-    animation-delay: 0s;
-}
-.carousel-images img:nth-child(2) {
-    animation-delay: 4s;
-}
-.carousel-images img:nth-child(3) {
-    animation-delay: 8s;
-}
-.carousel-images img:nth-child(4) {
-    animation-delay: 12s;
-}
-
-@keyframes fade {
+/* Animación para deslizar las imágenes */
+@keyframes slide {
     0% {
-        opacity: 0;
-    }
-    5% {
-        opacity: 1;
+        transform: translateX(0);
     }
     25% {
-        opacity: 1;
+        transform: translateX(-100%);
     }
-    30% {
-        opacity: 0;
+    50% {
+        transform: translateX(-200%);
+    }
+    75% {
+        transform: translateX(-300%);
     }
     100% {
-        opacity: 0;
-    }
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    header {
-        padding: 20px;
-        height: 300px;
-    }
-
-    header .container {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    header h1 {
-        font-size: 28px;
-    }
-
-    nav ul {
-        flex-direction: column;
-    }
-
-    nav li {
-        margin: 10px 0;
-    }
-
-    .carousel-images img {
-        width: 100%;
+        transform: translateX(-400%);
     }
 }
