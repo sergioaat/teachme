@@ -8,23 +8,20 @@
 </head>
 <body>
     <header>
-        <div class="container">
-            <div style="display: flex; justify-content: space-between; align-items: center;">
-                <div style="display: flex; align-items: center; gap: 10px;">
-                    <!-- Logo y nombre -->
-                    <img src="images/logo3.png" alt="Logo Teachme" style="height: 60px;">
-                    <h1>Teachme</h1>
-                </div>
-                <!-- Imagen añadida -->
-                <img src="images/libros1.png" alt="Imagen libros Teachme" style="height: 210px;">
+        <div class="header-image-wrapper">
+            <img src="images/libros1.png" alt="Imagen libros Teachme" class="header-image" />
+        </div>
+        <div class="container header-container">
+            <div class="logo-nombre">
+                <img src="images/logo3.png" alt="Logo Teachme" style="height: 60px;">
+                <h1>Teachme</h1>
             </div>
         </div>
+        <div class="header-text">
+            <p class="header-sub">Asesoría académica profesional para estudiantes y trabajadores.</p>
+            <p class="header-sub">Ofrecemos la oportunidad de seguir mejorando en tu camino al título universitario.</p>
+        </div>
     </header>
-
-    <div class="header-text-container">
-        <p class="header-text">Asesoría académica profesional para estudiantes y trabajadores.</p>
-        <p class="header-text">Ofrecemos la oportunidad de seguir mejorando en tu camino al título universitario.</p>
-    </div>
 
     <nav>
         <ul>
@@ -47,7 +44,6 @@
                 <li>Actividades en Cálculo 1, 2 y 3</li>
                 <li>Parciales y quices de Ecuaciones diferenciales</li>
                 <li>Talleres de Geometría y trigonometría</li>
-                <li>Proyectos y talleres de Electromagnetismo</li>
                 <li>Electrónica y Electricidad básica</li>
                 <li>Física 1, 2 y 3</li>
                 <li>Biología general</li>
@@ -56,6 +52,16 @@
                 <li>Cuéntanos tu caso y te ayudamos</li>
             </ul>
             <p><strong>Nota:</strong> <span class="resaltar">Contáctanos para cotizar tu caso.</span></p>
+
+            <!-- Carrusel de imágenes -->
+            <div class="carrusel">
+                <div class="carrusel-inner">
+                    <img src="images/actividad1.jpg" alt="Actividad 1">
+                    <img src="images/actividad2.jpg" alt="Actividad 2">
+                    <img src="images/actividad3.jpg" alt="Actividad 3">
+                    <img src="images/actividad4.jpg" alt="Actividad 4">
+                </div>
+            </div>
         </section>
 
         <section id="porque" class="container">
