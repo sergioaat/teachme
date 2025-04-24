@@ -139,7 +139,7 @@ footer {
     max-width: 400%; /* Solo una imagen a la vez */
     margin: 0 10px;
     border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* Animación para deslizar las imágenes */
