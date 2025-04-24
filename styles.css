@@ -54,7 +54,7 @@ header img.header-image {
 .header-text {
     font-size: 24px;
     font-weight: bold;
-    color: white; /* Texto en blanco */
+    color: black; /* Texto en blanco */
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra para mayor visibilidad */
     margin: 10px 0; /* Espaciado entre los párrafos */
 }
