@@ -10,6 +10,37 @@ header {
     color: white;
     padding: 40px 0;
     text-align: center;
+    position: relative;
+    background-image: url('images/libros1.jpg'); /* Imagen de fondo */
+    background-size: cover; /* Imagen cubre todo el área */
+    background-position: center; /* Imagen centrada */
+    height: 400px; /* Ajusta la altura del header */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 0 20px;
+}
+
+header h1 {
+    font-size: 36px;
+    z-index: 1; /* Asegura que el texto del título esté encima de la imagen */
+}
+
+header p {
+    position: absolute;
+    top: 50%; /* Centra verticalmente */
+    left: 50%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%); /* Alineación perfecta */
+    font-size: 24px;
+    font-weight: bold;
+    color: white; /* Texto en blanco */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra para mayor visibilidad */
 }
 
 nav {
@@ -77,26 +108,19 @@ footer {
 
 /* Media Query para dispositivos móviles */
 @media (max-width: 768px) {
-    header .container {
+    header {
         padding: 20px;
+        height: 300px; /* Ajusta la altura del header en dispositivos móviles */
     }
 
-    header div {
+    header .container {
         flex-direction: column;
         align-items: center;
         text-align: center;
     }
 
-    header img {
-        margin-bottom: 10px;
-    }
-
-    header img:last-child {
-        height: 60px;
-    }
-
-    .container {
-        padding: 10px;
+    header h1 {
+        font-size: 28px;
     }
 
     nav ul {
