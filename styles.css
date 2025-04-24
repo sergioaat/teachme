@@ -63,3 +63,14 @@ footer {
     padding: 15px 0;
     margin-top: 30px;
 }
+
+/* Estilo para el enlace de Instagram */
+.social-link {
+    color: #0073e6;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.social-link:hover {
+    text-decoration: underline;
+}
