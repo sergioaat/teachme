@@ -124,39 +124,51 @@ footer {
 
 /* Estilos para el catálogo deslizable */
 .carousel {
-    overflow: hidden;
-    margin-top: 20px;
+    position: relative;
     width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    overflow: hidden;
 }
 
 .carousel-images {
-    display: flex;
-    animation: slide 10s infinite;
+    position: relative;
+    height: auto;
 }
 
+/* Todas las imágenes superpuestas */
 .carousel-images img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 80%;
-    max-width: 400%; /* Solo una imagen a la vez */
-    margin: 0 10px;
+    max-width: 100%;
+    margin: 0 auto;
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    animation: fade 12s infinite;
 }
 
-/* Animación para deslizar las imágenes */
-@keyframes slide {
-    0% {
-        transform: translateX(0);
-    }
-    25% {
-        transform: translateX(-100%);
-    }
-    50% {
-        transform: translateX(-200%);
-    }
-    75% {
-        transform: translateX(-300%);
-    }
-    100% {
-        transform: translateX(-400%);
-    }
+/* Animación para mostrar una imagen a la vez */
+@keyframes fade {
+    0%   { opacity: 0; }
+    8.33%  { opacity: 1; }
+    25%  { opacity: 1; }
+    33.33% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+/* Retrasos para mostrar imágenes secuencialmente */
+.carousel-images img:nth-child(1) {
+    animation-delay: 0s;
+}
+.carousel-images img:nth-child(2) {
+    animation-delay: 3s;
+}
+.carousel-images img:nth-child(3) {
+    animation-delay: 6s;
+}
+.carousel-images img:nth-child(4) {
+    animation-delay: 9s;
 }
