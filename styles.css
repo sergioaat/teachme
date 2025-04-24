@@ -126,7 +126,9 @@ footer {
 .carousel {
     overflow: hidden;
     margin-top: 20px;
+    text-align: center;
     width: 100%;
+    min-height: 300px; /* Asegura el espacio vertical reservado */
 }
 
 .carousel-images {
