@@ -11,9 +11,6 @@ header {
     padding: 40px 0;
     text-align: center;
     position: relative;
-    background-image: url('images/libros1.jpg'); /* Imagen de fondo */
-    background-size: cover; /* Imagen cubre todo el área */
-    background-position: center; /* Imagen centrada */
     height: 400px; /* Ajusta la altura del header */
 }
 
@@ -32,7 +29,7 @@ header h1 {
     z-index: 1; /* Asegura que el texto del título esté encima de la imagen */
 }
 
-header p {
+header .header-text {
     position: absolute;
     top: 50%; /* Centra verticalmente */
     left: 50%; /* Centra horizontalmente */
@@ -41,6 +38,22 @@ header p {
     font-weight: bold;
     color: white; /* Texto en blanco */
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra para mayor visibilidad */
+}
+
+.header-image-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0; /* Imagen detrás del texto */
+}
+
+header img.header-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5; /* Imagen con 50% de opacidad */
 }
 
 nav {
