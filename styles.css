@@ -135,8 +135,8 @@ footer {
 }
 
 .carousel-images img {
-    width: 100%;
-    max-width: 100%; /* Solo una imagen a la vez */
+    width: 80%;
+    max-width: 400%; /* Solo una imagen a la vez */
     margin: 0 10px;
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
