@@ -137,10 +137,11 @@ footer {
 
 .carousel-images img {
     width: 100%;
-    max-width: 100%; /* Esto garantiza que solo una imagen se ve a la vez */
+    max-width: 70%; /* Reducir el tamaño en un 30% */
     margin: 0;
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    object-fit: cover; /* Asegura que las imágenes se mantengan proporcionales */
 }
 
 /* Animación para deslizar las imágenes */
