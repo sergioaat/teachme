@@ -16,7 +16,8 @@ header {
 
 header .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* Centrado del contenido en el header */
+    align-items: center; /* Alineación vertical */
     width: 100%;
     position: relative;
     z-index: 1;
@@ -144,4 +145,3 @@ footer {
         margin: 10px 0;
     }
 }
-
